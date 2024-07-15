@@ -1,14 +1,18 @@
 import CalendarTile from "./CalendarTile";
-import './style/CalendarStyle.css';
+import BirthdayModal from './BirthdayModal';
+import '../style/CalendarStyle.css';
+import { useState } from 'react';
+import Modal from '@mui/joy/Modal';
 
 export default function Calendar() {
+    const [dateSelected, setDateSelected] = useState(false);
     return(
-        <div>
+        <div onClick={()=> setDateSelected(true)}>
             <div>Welcome to the Calendar. Here, you can manage all of your birthdays
                 in a convenient calendar view.
             </div>
             <div>
-                <div style={{float:'left', marginLeft: '15%',display: "block"}}>
+                <div style={{float:'left',marginLeft:'8%',display: "block"}}>
                     <h1>Month</h1>
                 </div>
                 <br></br><br></br>
@@ -44,7 +48,8 @@ export default function Calendar() {
                     <CalendarTile date={29}></CalendarTile>
                     <CalendarTile date={30}></CalendarTile>
                 </div>
-            </div>
+            </div> 
+        <Modal open={dateSelected}><BirthdayModal></BirthdayModal></Modal>
         </div>
     )
 }

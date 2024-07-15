@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './style/App.css';
-import HomeScreen from './HomeScreen.js';
-import Calendar from './Calendar.js'
+import HomeScreen from './Components/HomeScreen.js';
+import Calendar from './Components/Calendar.js'
 import {Routes, Route} from 'react-router-dom';
 
 function App() {

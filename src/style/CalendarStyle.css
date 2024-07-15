@@ -4,10 +4,9 @@
     align-items: center;
     column-gap: 4%;
     flex-wrap: wrap;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-right: auto;
+    margin-left: auto;
     margin-top: 5%;
-}
-.calendar-tile{
-    width: 50%;
+    column-gap: 5%;
+    width: 80%;
 }
