@@ -1,14 +1,11 @@
 import CalendarTile from "./CalendarTile";
-import '../style/CalendarStyle.css';
+import '../style/calendar_style.css';
 import { useState, useContext } from 'react';
 
 export default function Calendar(props) {
     //const [dateSelected, setDateSelected] = useState(false);
     return(
         <div onClick={()=> props.modalToggle(true)}>
-            <div>Welcome to the Calendar. Here, you can manage all of your birthdays
-                in a convenient calendar view.
-            </div>
             <div>
                 <div style={{float:'left',marginLeft:'8%',display: "block"}}>
                     <h1>Month</h1>

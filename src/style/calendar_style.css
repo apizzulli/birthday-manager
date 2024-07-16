@@ -1,3 +1,13 @@
+.calendar-tile{
+    width: 8%;
+    height: 25%;
+    border-color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+}
 .row1{
     display: flex;
     flex-direction: row;
