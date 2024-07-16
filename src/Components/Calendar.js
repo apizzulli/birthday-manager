@@ -3,7 +3,6 @@ import '../style/calendar_style.css';
 import { useState, useContext } from 'react';
 
 export default function Calendar({modalToggle}) {
-    //const [dateSelected, setDateSelected] = useState(false);
     return(
         <div >
             <div>
