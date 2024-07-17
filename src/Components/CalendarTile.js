@@ -3,13 +3,12 @@ import '../style/calendar_style.css';
 import { useState } from 'react';
 import StarIcon from '@mui/icons-material/Star';
 
-export default function CalendarTile({modalToggle, date}) {
+export default function CalendarTile({modalToggle, date, selected}) {
     const [hovered, setHovered] = useState(false);
-    const [selected, setSelected] = useState(false);
+    //const [selected, setSelected] = useState(false);
 
     const handleClick =()=>{
         modalToggle(true);
-        setSelected(true);
     }
 
     return(
