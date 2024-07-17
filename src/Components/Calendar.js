@@ -17,37 +17,36 @@ export default function Calendar() {
                 </div>
                 <br></br><br></br>
                 <div class="row1">
-                    <CalendarTile modal={toggleModal} date={1}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={2}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={3}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={4}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={5}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={6}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={7}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={8}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={9}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={10}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={11}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={12}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={13}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={14}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={15}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={16}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={17}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={18}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={19}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={20}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={21}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={22}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={23}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={24}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={25}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={26}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={27}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={28}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={29}></CalendarTile>
-                    <CalendarTile modal={toggleModal} date={30}></CalendarTile>
-                    <Modal open={modal} close={modal}><BirthdayModal toggle={toggleModal}></BirthdayModal></Modal>
+                    <CalendarTile date={1}></CalendarTile>
+                    <CalendarTile date={2}></CalendarTile>
+                    <CalendarTile date={3}></CalendarTile>
+                    <CalendarTile date={4}></CalendarTile>
+                    <CalendarTile date={5}></CalendarTile>
+                    <CalendarTile date={6}></CalendarTile>
+                    <CalendarTile date={7}></CalendarTile>
+                    <CalendarTile date={8}></CalendarTile>
+                    <CalendarTile date={9}></CalendarTile>
+                    <CalendarTile date={10}></CalendarTile>
+                    <CalendarTile date={11}></CalendarTile>
+                    <CalendarTile date={12}></CalendarTile>
+                    <CalendarTile date={13}></CalendarTile>
+                    <CalendarTile date={14}></CalendarTile>
+                    <CalendarTile date={15}></CalendarTile>
+                    <CalendarTile date={16}></CalendarTile>
+                    <CalendarTile date={17}></CalendarTile>
+                    <CalendarTile date={18}></CalendarTile>
+                    <CalendarTile date={19}></CalendarTile>
+                    <CalendarTile date={20}></CalendarTile>
+                    <CalendarTile date={21}></CalendarTile>
+                    <CalendarTile date={22}></CalendarTile>
+                    <CalendarTile date={23}></CalendarTile>
+                    <CalendarTile date={24}></CalendarTile>
+                    <CalendarTile date={25}></CalendarTile>
+                    <CalendarTile date={26}></CalendarTile>
+                    <CalendarTile date={27}></CalendarTile>
+                    <CalendarTile date={28}></CalendarTile>
+                    <CalendarTile date={29}></CalendarTile>
+                    <CalendarTile date={30}></CalendarTile>
                 </div>
             </div> 
         </div>
