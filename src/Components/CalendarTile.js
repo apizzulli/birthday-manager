@@ -22,9 +22,9 @@ export default function CalendarTile({date}) {
     // });
 
     return(
-        <div class="calendar-tile" onMouseOver={()=> setHovered(true)} onMouseLeave={()=> setHovered(false)}style={{backgroundColor: hovered ? '#D8F8FE' : 'white'}}>
+        <div onMouseDown={()=> setModalVisible(true)}class="calendar-tile" onMouseOut={()=>setHovered(false)}onMouseMove={()=> setHovered(true)} onMouseLeave={()=> setHovered(false)}style={{backgroundColor: hovered ? '#D8F8FE' : 'white'}}>
             <StarIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', visibility: selected ? 'visible' : 'hidden'}}></StarIcon>
-            <h1 onClick={()=> setModalVisible(true)}>{date}</h1>
+            <h1 >{date}</h1>
             <Modal open={modalVisible}><BirthdayModal dateSelected={{selected, setSelected}} closeModal={setModalVisible}></BirthdayModal></Modal>
         </div>
     )
