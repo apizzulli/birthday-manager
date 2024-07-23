@@ -6,8 +6,10 @@ import BirthdayModal from "./BirthdayModal";
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 
 export default function Calendar() {
+    const [thirtyOneDays, setThirtyOneDays] = useState(true);
     const [selectedMonth, setSelectedMonth] = useState("January");
     const[modal, toggleModal] = useState(false);
     const [anchorEl, setAnchorEl] = useState(null);
@@ -22,21 +24,33 @@ export default function Calendar() {
     };
 
     const handleMonthSelect = (event) => {
-        setSelectedMonth(event.currentTarget.innerText);
+        let month = event.currentTarget.innerText;
+        if( month==="April" || month==="June" || month==="September" || month==="November"){
+            setThirtyOneDays(false);
+        }
+        setSelectedMonth(month);
+        setAnchorEl(null);
     }
   
     return(
-        <div >
-            <div>
-                <div style={{float: 'left',marginLeft:"7%"}}>
-                    <h1>{selectedMonth}</h1>
-                    <ArrowDropDownIcon onClick={handleMenuOpen}></ArrowDropDownIcon>
+        <div style={{width:'100%'}}>
+            <div style={{width:'100%'}}>
+                <div style={{float: 'left',marginLeft:"7%", display:'flex', alignItems:'center', width:'15%', columnGap:'10%'}}>
+                    <h1 style={{width:'50%'}}>{selectedMonth}</h1>
+                    <div style={{width:'50%'}}>
+                        <ArrowDropDownIcon style={{display:anchorEl ? 'none': 'block'}}onClick={handleMenuOpen}></ArrowDropDownIcon>
+                        <ArrowDropUpIcon style={{display:anchorEl ? 'block': 'none'}}onClick={()=>setAnchorEl(null)}></ArrowDropUpIcon>
+                    </div>
                     <Menu anchorEl={anchorEl}
                         open={open}
                         anchorOrigin={{
                             vertical: 'top',
                             horizontal: 'left',
-                        }}>   
+                          }}
+                          transformOrigin={{
+                            vertical: 'top',
+                            horizontal: 'left',
+                          }}>   
                         <MenuItem onClick={(event)=>handleMonthSelect(event)}>February</MenuItem>
                         <MenuItem onClick={(event)=>handleMonthSelect(event)}>March</MenuItem>
                         <MenuItem onClick={(event)=>handleMonthSelect(event)}>April</MenuItem>
@@ -78,10 +92,10 @@ export default function Calendar() {
                     <CalendarTile date={24}></CalendarTile>
                     <CalendarTile date={25}></CalendarTile>
                     <CalendarTile date={26}></CalendarTile>
-                    <CalendarTile date={27}></CalendarTile>
                     <CalendarTile date={28}></CalendarTile>
                     <CalendarTile date={29}></CalendarTile>
                     <CalendarTile date={30}></CalendarTile>
+                    <CalendarTile date={31} month ={selectedMonth} ></CalendarTile>
                 </div>
             </div> 
         </div>
