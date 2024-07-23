@@ -29,7 +29,7 @@ export default function CalendarTile({date, month}) {
             >
             <StarIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', visibility: selected ? 'visible' : 'hidden'}}></StarIcon>
             <h1 >{date}</h1>
-            <Modal open={modalVisible}><BirthdayModal dateSelected={{selected, setSelected}} closeModal={setModalVisible}></BirthdayModal></Modal>
+            <Modal open={modalVisible}><BirthdayModal month={month} date={date} dateSelected={{selected, setSelected}} closeModal={setModalVisible}></BirthdayModal></Modal>
         </div>
     )
 }
