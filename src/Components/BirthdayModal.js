@@ -15,8 +15,8 @@ export default function BirthdayModal(props) {
                     <Input sx={{width: 300, marginBottom: '3%'}} placeholder="Name" required></Input>
                     <Input sx={{width: 300, marginBottom: '3%'}} placeholder="Note"> </Input>
                     <Input sx={{width: 300, marginBottom: '3%'}} placeholder="Reminder"> </Input>
-                    <Button onClick={()=> {setBirthdayCreated(true)}} sx={{width: 100, marginBottom: '3%', display: birthdayCreated ? 'none': 'block', marginTop:'6%'}} variant = "plain" type="submit">Create</Button>
-                    <h3 style={{display: birthdayCreated ? 'block': 'none'}}>Birthday Created!</h3>
+                    <Button onClick={()=> {props.dateSelected.setSelected(true)}} sx={{width: 100, marginBottom: '3%', display: birthdayCreated ? 'none': 'block', marginTop:'6%'}} variant = "plain" type="submit">Create</Button>
+                    <h3 style={{display: props.dateSelected.selected ? 'block': 'none'}}>Birthday Created!</h3>
                 </div>
             </div> 
         </div>
