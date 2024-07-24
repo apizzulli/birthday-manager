@@ -6,6 +6,7 @@ import Modal from '@mui/joy/Modal';
 import BirthdayModal from './BirthdayModal';
 
 export default function CalendarTile({date, month}) {
+    const[ name, setName ] = useState(null);
     const [hovered, setHovered] = useState(false);
     const [selected, setSelected] = useState(false);
     const[modalVisible, setModalVisible] = useState(false);
@@ -15,21 +16,15 @@ export default function CalendarTile({date, month}) {
         help = true;
     }
 
-    // useEffect(()=>{
-    //     if(help)
-    //         setModalVisible(false);
-    //     console.log("modalVisible = "+modalVisible);
-    // });
-
     return(
         <div onMouseDown={()=> setModalVisible(true)}class="calendar-tile" onMouseOut={()=>setHovered(false)}onMouseMove={()=> setHovered(true)} onMouseLeave={()=> setHovered(false)}
             style={{backgroundColor: hovered ? '#D8F8FE' : 'white', 
                     visible: ((month==="April" || month==="June" || month==="September" || month==="November")&&(date===31)) ? 'hidden' : 'visible'
                 }}
             >
-            <StarIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', visibility: selected ? 'visible' : 'hidden'}}></StarIcon>
+            <StarIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', visibility: name != null ? 'visible' : 'hidden'}}></StarIcon>
             <h1 >{date}</h1>
-            <Modal open={modalVisible}><BirthdayModal month={month} date={date} dateSelected={{selected, setSelected}} closeModal={setModalVisible}></BirthdayModal></Modal>
+            <Modal open={modalVisible}><BirthdayModal name={name} setName={setName} month={month} date={date} dateSelected={{selected, setSelected}} closeModal={setModalVisible}></BirthdayModal></Modal>
         </div>
     )
 }
