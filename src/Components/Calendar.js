@@ -44,24 +44,25 @@ export default function Calendar() {
                     <Menu anchorEl={anchorEl}
                         open={open}
                         anchorOrigin={{
-                            vertical: 'top',
+                            vertical: 'bottom',
                             horizontal: 'left',
                           }}
                           transformOrigin={{
                             vertical: 'top',
                             horizontal: 'left',
                           }}>   
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>February</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>March</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>April</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>May</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>June</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>July</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>August</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>September</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>October</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>November</MenuItem>
-                        <MenuItem onClick={(event)=>handleMonthSelect(event)}>December</MenuItem>
+                        <MenuItem selected={selectedMonth==="January"} onClick={(event)=>handleMonthSelect(event)}>January</MenuItem>
+                        <MenuItem selected={selectedMonth==="February"} onClick={(event)=>handleMonthSelect(event)}>February</MenuItem>
+                        <MenuItem selected={selectedMonth==="March"} onClick={(event)=>handleMonthSelect(event)}>March</MenuItem>
+                        <MenuItem selected={selectedMonth==="April"} onClick={(event)=>handleMonthSelect(event)}>April</MenuItem>
+                        <MenuItem selected={selectedMonth==="May"} onClick={(event)=>handleMonthSelect(event)}>May</MenuItem>
+                        <MenuItem selected={selectedMonth==="June"} onClick={(event)=>handleMonthSelect(event)}>June</MenuItem>
+                        <MenuItem selected={selectedMonth==="July"} onClick={(event)=>handleMonthSelect(event)}>July</MenuItem>
+                        <MenuItem selected={selectedMonth==="August"} onClick={(event)=>handleMonthSelect(event)}>August</MenuItem>
+                        <MenuItem selected={selectedMonth==="September"} onClick={(event)=>handleMonthSelect(event)}>September</MenuItem>
+                        <MenuItem selected={selectedMonth==="October"} onClick={(event)=>handleMonthSelect(event)}>October</MenuItem>
+                        <MenuItem selected={selectedMonth==="November"} onClick={(event)=>handleMonthSelect(event)}>November</MenuItem>
+                        <MenuItem selected={selectedMonth==="December"} onClick={(event)=>handleMonthSelect(event)}>December</MenuItem>
                     </Menu>
                 </div>
                 <br></br><br></br>
