@@ -39,6 +39,7 @@ export default function Calendar(props) {
                     <CalendarTile month={props.month} date={24} ordinal={"th"}></CalendarTile>
                     <CalendarTile month={props.month} date={25} ordinal={"th"}></CalendarTile>
                     <CalendarTile month={props.month} date={26} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={27} ordinal={"th"}></CalendarTile>
                     <CalendarTile month={props.month} date={28} ordinal={"th"}></CalendarTile>
                     <CalendarTile month={props.month} date={29} ordinal={"th"}></CalendarTile>
                     <CalendarTile month={props.month} date={30} ordinal={"th"}></CalendarTile>

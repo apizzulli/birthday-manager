@@ -20,7 +20,7 @@ export default function CalendarTile({date, month, ordinal}) {
     return(
         <div onMouseDown={()=> setModalVisible(true)}class="calendar-tile" onMouseOut={()=>setHovered(false)}onMouseMove={()=> setHovered(true)} onMouseLeave={()=> setHovered(false)}
             style={{backgroundColor: hovered ? '#D8F8FE' : 'white', 
-                    display: ((month==MONTHS.APRIL || month==MONTHS.JUNE || month==MONTHS.SEPTEMBER || month==MONTHS.NOVEMBER)&& date==31) ? 'none' : 'flex'
+                    display: ((month==MONTHS.FEBRUARY || month==MONTHS.APRIL || month==MONTHS.JUNE || month==MONTHS.SEPTEMBER || month==MONTHS.NOVEMBER)&& date==31) ||(month == MONTHS.FEBRUARY && date==30) ||(month == MONTHS.FEBRUARY && date==29) ? 'none' : 'flex'
                 }}
             >
             <StarIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', visibility: name != null ? 'visible' : 'hidden'}}></StarIcon>

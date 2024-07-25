@@ -13,7 +13,7 @@ export default function BirthdayModal(props) {
 
     function handleSubmit(event) {
         const firstName = event.currentTarget.form.name.value;
-        if(props.name === "")
+        if(event.currentTarget.form.name.value === "")
             setDisplayError(true);
         else{
             props.setName(firstName);
@@ -37,7 +37,7 @@ export default function BirthdayModal(props) {
                 </form>
             </div>
             <div class="birthday-info" style={{display: props.name === null ? 'none': 'flex'}}>
-                <h2>{props.month} {props.date}{props.ordinal}</h2>
+                <h2>{props.month} {props.date}{props.ordinals}</h2>
                 <h2>{props.name}'s Birthday</h2>
                 <CakeIcon></CakeIcon>
             </div> 
