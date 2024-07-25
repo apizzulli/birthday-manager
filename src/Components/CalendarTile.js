@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import StarIcon from '@mui/icons-material/Star';
 import Modal from '@mui/joy/Modal';
 import BirthdayModal from './BirthdayModal';
+import { MONTHS } from './CalendarView';
 
 export default function CalendarTile({date, month}) {
     const[ name, setName ] = useState(null);
@@ -19,7 +20,7 @@ export default function CalendarTile({date, month}) {
     return(
         <div onMouseDown={()=> setModalVisible(true)}class="calendar-tile" onMouseOut={()=>setHovered(false)}onMouseMove={()=> setHovered(true)} onMouseLeave={()=> setHovered(false)}
             style={{backgroundColor: hovered ? '#D8F8FE' : 'white', 
-                    visible: ((month==="April" || month==="June" || month==="September" || month==="November")&&(date===31)) ? 'hidden' : 'visible'
+                    display: ((month==MONTHS.APRIL || month==MONTHS.JUNE || month==MONTHS.SEPTEMBER || month==MONTHS.NOVEMBER)&& date==31) ? 'none' : 'flex'
                 }}
             >
             <StarIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', visibility: name != null ? 'visible' : 'hidden'}}></StarIcon>
