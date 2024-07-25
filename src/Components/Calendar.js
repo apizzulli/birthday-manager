@@ -13,36 +13,36 @@ export default function Calendar(props) {
             <div style={{width:'100%'}}>
                 <br></br><br></br>
                 <div class="row1">
-                    <CalendarTile month={props.month} date={1} ></CalendarTile>
-                    <CalendarTile month={props.month} date={2} ></CalendarTile>
-                    <CalendarTile month={props.month} date={3} ></CalendarTile>
-                    <CalendarTile month={props.month} date={4} ></CalendarTile>
-                    <CalendarTile month={props.month} date={5} ></CalendarTile>
-                    <CalendarTile month={props.month} date={6} ></CalendarTile>
-                    <CalendarTile month={props.month} date={7} ></CalendarTile>
-                    <CalendarTile month={props.month} date={8} ></CalendarTile>
-                    <CalendarTile month={props.month} date={9} ></CalendarTile>
-                    <CalendarTile month={props.month} date={10} ></CalendarTile>
-                    <CalendarTile month={props.month} date={11} ></CalendarTile>
-                    <CalendarTile month={props.month} date={12} ></CalendarTile>
-                    <CalendarTile month={props.month} date={13} ></CalendarTile>
-                    <CalendarTile month={props.month} date={14} ></CalendarTile>
-                    <CalendarTile month={props.month} date={15} ></CalendarTile>
-                    <CalendarTile month={props.month} date={16} ></CalendarTile>
-                    <CalendarTile month={props.month} date={17} ></CalendarTile>
-                    <CalendarTile month={props.month} date={18} ></CalendarTile>
-                    <CalendarTile month={props.month} date={19} ></CalendarTile>
-                    <CalendarTile month={props.month} date={20} ></CalendarTile>
-                    <CalendarTile month={props.month} date={21} ></CalendarTile>
-                    <CalendarTile month={props.month} date={22} ></CalendarTile>
-                    <CalendarTile month={props.month} date={23} ></CalendarTile>
-                    <CalendarTile month={props.month} date={24} ></CalendarTile>
-                    <CalendarTile month={props.month} date={25} ></CalendarTile>
-                    <CalendarTile month={props.month} date={26} ></CalendarTile>
-                    <CalendarTile month={props.month} date={28} ></CalendarTile>
-                    <CalendarTile month={props.month} date={29} ></CalendarTile>
-                    <CalendarTile month={props.month} date={30} ></CalendarTile>
-                    <CalendarTile month={props.month} date={31}  ></CalendarTile>
+                    <CalendarTile month={props.month} date={1} ordinal={"1st"}></CalendarTile>
+                    <CalendarTile month={props.month} date={2} ordinal={"nd"}></CalendarTile>
+                    <CalendarTile month={props.month} date={3} ordinal={"rd"}></CalendarTile>
+                    <CalendarTile month={props.month} date={4} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={5} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={6} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={7} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={8} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={9} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={10} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={11} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={12} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={13} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={14} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={15} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={16} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={17} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={18} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={19} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={20} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={21} ordinal={"st"}></CalendarTile>
+                    <CalendarTile month={props.month} date={22} ordinal={"nd"}></CalendarTile>
+                    <CalendarTile month={props.month} date={23} ordinal={"3rd"}></CalendarTile>
+                    <CalendarTile month={props.month} date={24} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={25} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={26} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={28} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={29} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={30} ordinal={"th"}></CalendarTile>
+                    <CalendarTile month={props.month} date={31} ordinal={"st"} ></CalendarTile>
                 </div>
             </div> 
         </div>

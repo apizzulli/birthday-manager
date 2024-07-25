@@ -6,7 +6,7 @@ import Modal from '@mui/joy/Modal';
 import BirthdayModal from './BirthdayModal';
 import { MONTHS } from './CalendarView';
 
-export default function CalendarTile({date, month}) {
+export default function CalendarTile({date, month, ordinal}) {
     const[ name, setName ] = useState(null);
     const [hovered, setHovered] = useState(false);
     const [selected, setSelected] = useState(false);
@@ -25,7 +25,7 @@ export default function CalendarTile({date, month}) {
             >
             <StarIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', visibility: name != null ? 'visible' : 'hidden'}}></StarIcon>
             <h1 >{date}</h1>
-            <Modal open={modalVisible}><BirthdayModal name={name} setName={setName} month={month} date={date} dateSelected={{selected, setSelected}} closeModal={setModalVisible}></BirthdayModal></Modal>
+            <Modal open={modalVisible}><BirthdayModal name={name} setName={setName} month={month} date={date} ordinal={ordinal} dateSelected={{selected, setSelected}} closeModal={setModalVisible}></BirthdayModal></Modal>
         </div>
     )
 }
