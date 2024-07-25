@@ -72,18 +72,18 @@ export default function CalendarView () {
                         <ArrowDropUpIcon style={{display:anchorEl ? 'block': 'none'}}onClick={()=>setAnchorEl(null)}></ArrowDropUpIcon>
                     </div>
                 </div>
-            <div  style={{visible: selectedMonth===MONTHS.JANUARY ? 'visible': 'hidden'}}><Calendar month={MONTHS.JANUARY}></Calendar></div>
-            <Calendar style={{visible: selectedMonth===MONTHS.FEBRUARY ? 'visible': 'hidden'}} month={MONTHS.FEBRUARY}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.MARCH ? 'visible': 'hidden'}} month={MONTHS.MARCH}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.APRIL ? 'visible': 'hidden'}} month={MONTHS.APRIL}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.MAY ? 'visible': 'hidden'}}  month={MONTHS.MAY}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.JUNE ? 'visible': 'hidden'}} month={MONTHS.JUNE}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.JULY ? 'visible': 'hidden'}} month={MONTHS.JULY}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.AUGUST ? 'visible': 'hidden'}}  month={MONTHS.AUGUST}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.SEPTEMBER ? 'visible': 'hidden'}} month={MONTHS.SEPTEMBER}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.OCTOBER ? 'visible': 'hidden'}}  month={MONTHS.OCTOBER}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.NOVEMBER ? 'visible': 'hidden'}} month={MONTHS.NOVEMBER}></Calendar>
-            <Calendar style={{visible: selectedMonth===MONTHS.DECEMBER ? 'visible': 'hidden'}} month={MONTHS.DECEMBER}></Calendar>
+            <div style={{display: selectedMonth===MONTHS.JANUARY ? 'block': 'none'}}><Calendar month={MONTHS.JANUARY}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.FEBRUARY ? 'block': 'none'}}><Calendar month={MONTHS.FEBRUARY}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.MARCH ? 'block': 'none'}}><Calendar month={MONTHS.MARCH}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.APRIL ? 'block': 'none'}}><Calendar month={MONTHS.APRIL}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.MAY ? 'block': 'none'}} ><Calendar month={MONTHS.MAY}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.JUNE ? 'block': 'none'}} ><Calendar month={MONTHS.JUNE}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.JULY ? 'block': 'none'}} ><Calendar month={MONTHS.JULY}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.AUGUST ? 'block': 'none'}}><Calendar month={MONTHS.AUGUST}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.SEPTEMBER ? 'block': 'none'}}><Calendar month={MONTHS.SEPTEMBER}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.OCTOBER ? 'block': 'none'}}> <Calendar month={MONTHS.OCTOBER}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.NOVEMBER ? 'block': 'none'}}> <Calendar month={MONTHS.NOVEMBER}></Calendar></div>
+            <div style={{display: selectedMonth===MONTHS.DECEMBER ? 'block': 'none'}}><Calendar month={MONTHS.DECEMBER}></Calendar></div>
         </div>
     );
 }
