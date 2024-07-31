@@ -2,7 +2,7 @@ import '../style/birthday_modal_style.css';
 import Input from '@mui/joy/Input';
 import Button from '@mui/joy/Button';
 import CancelIcon from '@mui/icons-material/Cancel';
-import { useContext, useState } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import CakeIcon from '@mui/icons-material/Cake';
 
 export default function BirthdayModal(props) {
@@ -10,6 +10,12 @@ export default function BirthdayModal(props) {
     const [ displayError, setDisplayError ] = useState(false);
     let ordinals = "";
     
+
+    useEffect(() => {
+        fetch(`http://127.0.0.1:5000/${props.date}`).then(results => results.json()).then(data => {
+        console.log("data=" + data);
+      });
+    });
 
     function handleSubmit(event) {
         const firstName = event.currentTarget.form.name.value;
@@ -37,8 +43,9 @@ export default function BirthdayModal(props) {
                 </form>
             </div>
             <div class="birthday-info" style={{display: props.name === null ? 'none': 'flex'}}>
-                <h2>{props.month} {props.date}{props.ordinals}</h2>
+                <h2>{props.month} {props.date}{props.ordinal}</h2>
                 <h2>{props.name}'s Birthday</h2>
+
                 <CakeIcon></CakeIcon>
             </div> 
         </div>
