@@ -9,10 +9,9 @@ export default function Calendar(props) {
     const[modal, toggleModal] = useState(false);
   
     return(
-        <div style={{width:'100%'}}>
-            <div style={{width:'100%'}}>
-                <br></br><br></br>
-                <div class="row1">
+        <div>
+            <div>
+                <div class="tile-container">
                     <CalendarTile month={props.month} date={1} ordinal={"1st"}></CalendarTile>
                     <CalendarTile month={props.month} date={2} ordinal={"nd"}></CalendarTile>
                     <CalendarTile month={props.month} date={3} ordinal={"rd"}></CalendarTile>

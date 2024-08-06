@@ -5,17 +5,21 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import { useContext, useState, useEffect } from 'react';
 import CakeIcon from '@mui/icons-material/Cake';
 
+function Birthday(name, date) {
+    this.name = name;
+    this.date = date;
+}
+
 export default function BirthdayModal(props) {
     const [birthdayCreated, setBirthdayCreated] = useState(false);
     const [ displayError, setDisplayError ] = useState(false);
     let ordinals = "";
     
-
-    useEffect(() => {
-        fetch(`http://127.0.0.1:5000/${props.date}`).then(results => results.json()).then(data => {
-        console.log("data=" + data);
-      });
-    });
+    // useEffect(() => {
+    //     fetch(`http://127.0.0.1:5000/create-birthday${props.date}`).then(results => results.json()).then(data => {
+    //     console.log("data=" + data);
+    //   });
+    // });
 
     function handleSubmit(event) {
         const firstName = event.currentTarget.form.name.value;
@@ -24,6 +28,15 @@ export default function BirthdayModal(props) {
         else{
             props.setName(firstName);
             props.dateSelected.setSelected(true);    
+            fetch(`http://127.0.0.1:5000/create-birthday`, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(new Birthday(firstName, props.date))
+            }).then(
+                response => response.json()).then(
+                    data => console.log(data));
         }
     }
 

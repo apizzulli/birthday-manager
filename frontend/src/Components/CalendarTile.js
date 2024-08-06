@@ -1,7 +1,7 @@
 import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 import '../style/calendar_style.css';
 import { useState, useEffect } from 'react';
-import StarIcon from '@mui/icons-material/Star';
+import CakeIcon from '@mui/icons-material/Cake';
 import Modal from '@mui/joy/Modal';
 import BirthdayModal from './BirthdayModal';
 import { MONTHS } from './CalendarView';
@@ -12,18 +12,18 @@ export default function CalendarTile({date, month, ordinal}) {
     const [selected, setSelected] = useState(false);
     const[modalVisible, setModalVisible] = useState(false);
     let help = false;
-    const handleCloseModal = () => {
-        setModalVisible(false);
-        help = true;
+    const handleClick = () => {
+        setModalVisible(true);
+        setHovered(false);
     }
 
     return(
-        <div onMouseDown={()=> setModalVisible(true)}class="calendar-tile" onMouseOut={()=>setHovered(false)}onMouseMove={()=> setHovered(true)} onMouseLeave={()=> setHovered(false)}
-            style={{backgroundColor: hovered ? '#D8F8FE' : 'white', 
+        <div onMouseDown={handleClick}class="calendar-tile" onMouseOut={()=>setHovered(false)}onMouseOver={()=> setHovered(true)} onMouseLeave={()=> setHovered(false)}
+            style={{backgroundColor: hovered ? 'rgb(80, 99, 125)' : 'rgb(39, 48, 61)', 
                     display: ((month==MONTHS.FEBRUARY || month==MONTHS.APRIL || month==MONTHS.JUNE || month==MONTHS.SEPTEMBER || month==MONTHS.NOVEMBER)&& date==31) ||(month == MONTHS.FEBRUARY && date==30) ||(month == MONTHS.FEBRUARY && date==29) ? 'none' : 'flex'
                 }}
             >
-            <StarIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', visibility: name != null ? 'visible' : 'hidden'}}></StarIcon>
+            <CakeIcon style={{float:'left',marginRight:'7%',height:'25%', width:'25%', display: name != null ? 'flex' : 'none'}}></CakeIcon>
             <h1 >{date}</h1>
             <Modal open={modalVisible}><BirthdayModal name={name} setName={setName} month={month} date={date} ordinal={ordinal} dateSelected={{selected, setSelected}} closeModal={setModalVisible}></BirthdayModal></Modal>
         </div>

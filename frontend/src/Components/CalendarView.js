@@ -1,4 +1,5 @@
 import { useState, useContext, createContext } from "react";
+import '../style/calendar_style.css';
 import Calendar from './Calendar.js';
 import BirthdayModal from './BirthdayModal.js';
 import Modal from '@mui/joy/Modal';
@@ -44,15 +45,13 @@ export default function CalendarView () {
     };
 
     return(
-        <div>
-            <h3 class="title">Welcome to the Calendar Manager. Here, you can manage all of your birthdays
+        <div class="main">
+            <h2 class="title">Welcome to the Calendar Manager. Here, you can manage all of your birthdays
                 in a convenient calendar view.
-            </h3>
-            <div style={{float: 'left',marginLeft:"7%", display:'flex', alignItems:'center', width:'15%', columnGap:'5%'}}>
+            </h2>
+            <div class="menu">
                 <h1>{selectedMonth}</h1>
-                <Menu anchorEl={anchorEl}
-                    open={open}
-                   >   
+                <Menu anchorEl={anchorEl} open={open}>   
                     <MenuItem selected={selectedMonth===MONTHS.JANUARY} onClick={(event)=>handleMonthSelect(event)}>January</MenuItem>
                     <MenuItem selected={selectedMonth===MONTHS.FEBRUARY} onClick={(event)=>handleMonthSelect(event)}>February</MenuItem>
                     <MenuItem selected={selectedMonth===MONTHS.MARCH} onClick={(event)=>handleMonthSelect(event)}>March</MenuItem>
@@ -70,7 +69,7 @@ export default function CalendarView () {
                         <ArrowDropDownIcon style={{display:anchorEl ? 'none': 'block'}}onClick={handleMenuOpen}></ArrowDropDownIcon>
                         <ArrowDropUpIcon style={{display:anchorEl ? 'block': 'none'}}onClick={()=>setAnchorEl(null)}></ArrowDropUpIcon>
                     </div>
-                </div>
+            </div>
             <div style={{display: selectedMonth===MONTHS.JANUARY ? 'block': 'none'}}><Calendar month={MONTHS.JANUARY}></Calendar></div>
             <div style={{display: selectedMonth===MONTHS.FEBRUARY ? 'block': 'none'}}><Calendar month={MONTHS.FEBRUARY}></Calendar></div>
             <div style={{display: selectedMonth===MONTHS.MARCH ? 'block': 'none'}}><Calendar month={MONTHS.MARCH}></Calendar></div>
